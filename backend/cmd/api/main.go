@@ -4,57 +4,55 @@ package main
 
 import (
 	"context"
+	"database/sql"
 	"flag"
+	"os"
 	"strings"
-	"sync"
 	"time"
-
-	"golang.org/x/tools/go/analysis/passes/structtag"
 )
 
-//version umber 1
+// version umber 1
 const version = "0.1.0"
 
-//configuration settings
+// configuration settings
 type config struct {
 	port int
-	evn string // development | staging | production
-	db struct {
-		dsn string
+	env  string // development | staging | production
+	db   struct {
+		dsn          string
 		maxOpenConns int
 		maxIdleConns int
-		maxIdleTime string
+		maxIdleTime  string
 	}
 	limiter struct {
-		rps float64 //requests per second
-		burst int //how many request an the intial momment
-		enabled bool //rate limiting toggle
+		rps     float64 //requests per second
+		burst   int     //how many request an the intial momment
+		enabled bool    //rate limiting toggle
 	}
 	smtp struct {
-		host stringconfig
-		port int
+		host     string
+		port     int
 		username string //from email service probably mail trap
 		password string
-		sender string
-
+		sender   string
 	}
 	cors struct {
 		trustedOrigins []string
 	}
 }
 
-//dependency injection
+// dependency injection
 type application struct {
 	config config
 	logger *jsonlog.logger
 	models data.models
 	mailer mailer.mailer
-	wg sync.waitGroup
+	wg     sync.waitGroup
 }
 
-func main(){
+func main() {
 	var cfg config
-	
+
 	//flags for webserver
 	flag.IntVar(&cfg.port, "port", 4000, "API server port")
 	flag.StringVar(&cfg.env, "env", "development", "Environment(development | staging | production)")
@@ -70,12 +68,12 @@ func main(){
 
 	//flags for the mailer
 	flag.StringVar(&cfg.smtp.host, "smtp-host", "smpt.mailtrap.io", "SMTP host")
-	flag.IntVar(&cfg.smtp.port, "smtp-port", 25 "SMTP port")
+	flag.IntVar(&cfg.smtp.port, "smtp-port", 25, "SMTP port")
 	flag.StringVar(&cfg.smtp.username, "smtp-username", " ", "SMTP username")
 	flag.StringVar(&cfg.smtp.sender, "smtp-sender", " ", "SMPT sender")
 
 	//cors' flag
-	flag.func("cors-trusted-origin", "Trusted CORS origin (space separated)", func(val string) error {
+	flag.Func("cors-trusted-origin", "Trusted CORS origin (space separated)", func(val string) error {
 		cfg.cors.trustedOrigins = strings.Fields(val)
 		return nil
 	})
@@ -111,8 +109,8 @@ func main(){
 	}
 }
 
-//OpenDB() function returns a *sql.DB connection pool
-func openDB(cfg config)(*sql.DB, error){
+// OpenDB() function returns a *sql.DB connection pool
+func openDB(cfg config) (*sql.DB, error) {
 	db, err := sql.Open("postgres", cfg.db.dsn)
 	if err != nil {
 		return nil, err
