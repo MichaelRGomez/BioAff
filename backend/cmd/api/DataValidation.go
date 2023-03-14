@@ -87,12 +87,6 @@ type AffiantForm struct {
 	created_on               string
 }
 
-// embeds both base structs since they have similar data
-type FormInfo struct {
-	AffiantForm
-	ArchiveForm
-}
-
 // public user verification
 func (p publicUser) publicUserVerification() string {
 	if p.public_email == PubEmail && p.public_password == PubPassword {
@@ -106,6 +100,7 @@ func (p publicUser) publicUserVerification() string {
 	}
 }
 
+// admin user verification
 func (a AdminUser) adminUserVerification() string {
 	if a.admin_email == AdminEmail && a.admin_password == AdminPassword {
 		AdminEmail = a.admin_email
@@ -118,6 +113,7 @@ func (a AdminUser) adminUserVerification() string {
 	}
 }
 
+// form verification
 func (A AffiantForm) AffiamtFormVerification() {
 
 }
