@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 )
 
 // test variables
@@ -17,13 +18,15 @@ var Message = "Access granted"
 
 // Admin user struct
 type AdminUser struct {
-	admin_email    string
+	AdminID        int    "gorm: 'unique_index'"
+	admin_email    string "gorm:'typevarchar(100);unique_index'" // ensures each email addresses are unique
 	admin_password string
 }
 
 // public user struct
 type publicUser struct {
-	public_email    string
+	publicUserID    int    "gorm: 'unique_index'"
+	public_email    string "gorm:'typevarchar(100);unique_index'" // ensures each email addresses are unique
 	public_password string
 }
 
@@ -38,7 +41,7 @@ type History struct {
 type AffiantForm struct {
 	user_id                  int
 	form_id                  int
-	form_status              string
+	form_status              [4]string
 	archive_status           int
 	affiantFullName          string
 	otherNames               string
@@ -89,9 +92,23 @@ func (a AdminUser) adminUserVerification() string {
 
 // form verification
 func (A AffiantForm) AffiamtFormVerification() {
+	var Option int
+	A.form_status[0] = "New"
+	A.form_status[1] = "Pending"
+	A.form_status[2] = "Verified"
+	A.form_status[3] = "Returned"
 
 }
 
 func main() {
+	// Loading environment variables
+	dialect := os.Getenv("DIALECT")
+	host := os.Getenv("HOST")
+	dbPort := os.Getenv("DBPORT")
+	user := os.Getenv("USER")
+	dbName := os.Getenv("NAME")
+	password := os.Getenv("PASSWORD")
 
+	// Database connection string
+	dbURI = fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s port=%s,", host, user, dbName, password, dbPort)
 }
