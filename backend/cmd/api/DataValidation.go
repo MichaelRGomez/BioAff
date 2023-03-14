@@ -27,32 +27,6 @@ type publicUser struct {
 	public_password string
 }
 
-// archive form struct
-type ArchiveForm struct {
-	user_id                  int
-	form_id                  int
-	affiantFullName          string
-	otherNames               string
-	name_change_status       string
-	social_security_num      int
-	social_security_date     string
-	social_security_country  string
-	passport_number          int
-	passport_date            string
-	passport_country         string
-	dob                      string
-	place_of_birth           string
-	nationality              string
-	aquired_nationality      string
-	spouse_name              string
-	affiant_address          string
-	residencial_phone_number int
-	residencial_tax_number   int
-	residencial_email        string
-	created_on               string
-	archived_on              string
-}
-
 // history struct
 type History struct {
 	comment   string
