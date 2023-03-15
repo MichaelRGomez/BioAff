@@ -1,11 +1,15 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 
+	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
 
 // test variables
@@ -42,7 +46,7 @@ type History struct {
 	gorm.Model
 
 	comment   string
-	admin_id  string
+	admin_id  string "gorm: 'unique_index'"
 	edit_made string
 }
 
@@ -52,7 +56,7 @@ type AffiantForm struct {
 
 	user_id                  int
 	form_id                  int
-	form_status              [4]string
+	form_status              [4]string 
 	archive_status           int
 	affiantFullName          string
 	otherNames               string
@@ -75,6 +79,36 @@ type AffiantForm struct {
 	created_on               string
 }
 
+var (
+	admin_user = &AdminUser{AdminID: 432124, admin_email: "Jahmur760@gmail.com", admin_password: "P@ssword10",}
+	public_user = &publicUser{publicUserID: 321453, public_email: "JofnDoe@gmail.com",public_password: "P@ssword",}
+	form_history = &History{comment: "The form was completed", admin_id: 432124, edit_made: "The edit was made",}
+	affiant_form = &AffiantForm{
+		user_id: 3254,
+		form_id: 6543,
+		form_status: ["New"],
+		archive_status: 3423,
+		affiantFullName: "John Felix Cena",
+		otherNames: "BestWrestler",
+		name_change_status: "Pending",
+		social_security_num: "054234567",
+		social_security_country: "Belize",
+		social_security_date: "03/05/2014",
+		passport_number: 5425965,
+		passport_date: "04/06/2021",
+		passport_country: "Belize",
+		dob: "03/21/1997",
+		place_of_birth: "Stann Creek",
+		nationality: "Belizean",
+		aquired_nationality: "American",
+		spouse_name: "Shay Shariatzadeh",
+		affiant_address: "World Wrestling Entertainment, 1241, East Main Street, Stamford, CT 06902, United States",
+		residencial_phone_number: 5016724567,
+		residencial_tax_number:87946864,
+		residencial_email: "jane.doe@wwe.com",
+		created_on: "14/03/2023",
+	}
+)
 // public user verification
 func (p publicUser) publicUserVerification() string {
 	if p.public_email == PubEmail && p.public_password == PubPassword {
@@ -123,6 +157,9 @@ func main() {
 	dbName := os.Getenv("NAME")
 	password := os.Getenv("PASSWORD")
 
+	// initialize form status array
+	affiant_form.form_status := status{"new","Pending","Verified","Returned"}
+
 	// Database connection string
 	dbURI := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s port=%s,", host, user, dbName, password, dbPort)
 
@@ -139,5 +176,27 @@ func main() {
 	defer db.Close()
 
 	// Make migrations to the databse if they have not already been created
-	db.AutoMigrate
+	db.AutoMigrate(&AdminUser{})
+	db.AutoMigrate(&publicUser{})
+	db.AutoMigrate(&History{})
+	db.AutoMigrate(&AffiantForm{})
+
+	db.Create(&admin_user)
+	db.Create(&public_user)
+	db.Create(&form_history)
+	db.Create(&affiant_form)
+
+	// API routes
+	router := mux.NewRouter()
+
+	router.HandleFunc("/admin_user",getAdminUser).Methods("GET")
+
+	// start server
+	http.ListenAndServe(":8080", router)
+}
+
+func getAdminUser( w http.ResponseWriter, r *http.Request) {
+	var AdminUSer [] AdminUser
+	db.Find(&admin_user)
+	json.NewEncoder(w).Encode(&admin_user)
 }
