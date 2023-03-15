@@ -2,7 +2,10 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
+
+	"github.com/jinzhu/gorm"
 )
 
 // test variables
@@ -18,6 +21,8 @@ var Message = "Access granted"
 
 // Admin user struct
 type AdminUser struct {
+	gorm.Model
+
 	AdminID        int    "gorm: 'unique_index'"
 	admin_email    string "gorm:'typevarchar(100);unique_index'" // ensures each email addresses are unique
 	admin_password string
@@ -25,6 +30,8 @@ type AdminUser struct {
 
 // public user struct
 type publicUser struct {
+	gorm.Model
+
 	publicUserID    int    "gorm: 'unique_index'"
 	public_email    string "gorm:'typevarchar(100);unique_index'" // ensures each email addresses are unique
 	public_password string
@@ -32,6 +39,8 @@ type publicUser struct {
 
 // history struct
 type History struct {
+	gorm.Model
+
 	comment   string
 	admin_id  string
 	edit_made string
@@ -39,6 +48,8 @@ type History struct {
 
 // Affiant form struct
 type AffiantForm struct {
+	gorm.Model
+
 	user_id                  int
 	form_id                  int
 	form_status              [4]string
@@ -100,6 +111,9 @@ func (A AffiantForm) AffiamtFormVerification() {
 
 }
 
+var db *gorm.DB
+var err error
+
 func main() {
 	// Loading environment variables
 	dialect := os.Getenv("DIALECT")
@@ -110,5 +124,20 @@ func main() {
 	password := os.Getenv("PASSWORD")
 
 	// Database connection string
-	dbURI = fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s port=%s,", host, user, dbName, password, dbPort)
+	dbURI := fmt.Sprintf("host=%s user=%s dbname=%s sslmode=disable password=%s port=%s,", host, user, dbName, password, dbPort)
+
+	// Opening connection to database
+	db, err = gorm.Open(dialect, dbURI)
+	if err != nil {
+		log.Fatal(err)
+	} else {
+		fmt.Println("Successfully connected to database!")
+
+	}
+
+	// Close connection to database when the main function finishes
+	defer db.Close()
+
+	// Make migrations to the databse if they have not already been created
+	db.AutoMigrate
 }
