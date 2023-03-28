@@ -1,3 +1,0 @@
-INSERT INTO archive (form_id,form_status,archive_status,affiant_full_name,other_names,name_change_status,social_security_num, social_security_date,social_security_country,passport_number,passport_date, passport_country,dob,place_of_birth,nationality,acquired_nationality,spouse_name,affiants_address,residencial_phone_number,residenceial_fax_num,residencial_email)
-VALUES 
-(343434,'verified',false,'Hipolito Bautista','HipBau','Yes',02948503,TO_DATE('17/12/2015', 'DD/MM/YYYY'),'Belize', 29293, TO_DATE('17/12/20014', 'DD/MM/YYYY'), 'Belize', TO_DATE('17/12/1980', 'DD/MM/YYYY'), 'Corozal', 'Belizean','Mexican','Alany Castellanos','2 baboon avenue', 6367238, 293485993,'hipbauhome@gmail.com');  
