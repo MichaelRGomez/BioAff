@@ -1,4 +1,4 @@
-package main
+/*package main
 
 import (
 	"encoding/json"
@@ -56,7 +56,7 @@ type AffiantForm struct {
 
 	user_id                  int
 	form_id                  int
-	form_status              [4]string 
+	form_status              [4]string
 	archive_status           int
 	affiantFullName          string
 	otherNames               string
@@ -200,3 +200,5 @@ func getAdminUser( w http.ResponseWriter, r *http.Request) {
 	db.Find(&admin_user)
 	json.NewEncoder(w).Encode(&admin_user)
 }
+
+*/

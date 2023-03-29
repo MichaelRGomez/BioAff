@@ -10,6 +10,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/jinzhu/gorm/backend/internal/validator"
 	"golang.org/x/time/rate"
 )
 
