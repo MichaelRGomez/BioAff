@@ -6,5 +6,5 @@ create extension if not exists citext;
 create table if not exists public_user(
     id serial primary key,
     email citext unique not null,
-    pu_password bytea not null,
-)
+    pu_password bytea not null
+);

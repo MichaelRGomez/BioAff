@@ -3,3 +3,4 @@
 -- removing citext extension
 drop extension if exists citext;
 
+drop table if exists public_user;
