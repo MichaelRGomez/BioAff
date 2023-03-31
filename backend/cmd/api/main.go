@@ -11,6 +11,7 @@ import (
 	"time"
 
 	_ "github.com/lib/pq"
+	"se_group1.net/internal/data"
 	"se_group1.net/internal/jsonlog"
 )
 
@@ -50,8 +51,8 @@ type config struct {
 type application struct {
 	config config
 	logger *jsonlog.Logger
-	/*	models data.Models
-		mailer mailer.Mailer */
+	models data.Models
+	//	mailer mailer.Mailer
 	wg sync.WaitGroup
 }
 
