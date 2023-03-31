@@ -23,5 +23,6 @@ create table if not exists form(
     residential_phone_number text not null,
     residential_fax_number text,
     residentia_email citext,
-    created_on timestamp(0) with time zone not null default now()
+    created_on timestamp(0) with time zone not null default now(),
+    version int not null default 1
 );

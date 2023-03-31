@@ -14,12 +14,12 @@ var (
 // A wrapper for all of our models
 type Models struct {
 	PublicUsers PublicUserModel
-	Form        FormModel
+	Forms       FormModel
 }
 
 func NewModels(db *sql.DB) Models {
 	return Models{
 		PublicUsers: PublicUserModel{DB: db},
-		Form:        FormModel{DB: db},
+		Forms:       FormModel{DB: db},
 	}
 }
