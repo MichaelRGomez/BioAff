@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="BiographicalAffidavit.css">
+  <script src="BiographicalAffidavit.js"></script>
+
+</head>
+
+<body>
+
+  <h2 id="heading">Biographical Affidavit</h2>
+  <form id="form">
+
+    <p>
+      <label for="full-name">1. Affiant's Full Name:</label>
+      <input type="text" id="full-name" name="full-name" placeholder="Full name">
+    </p>
+
+    <p>
+      <label for="other-names">2. Other names used at any time:</label>
+      <input type="text" id="other-names" name="other-names" placeholder="Other name">
+    </p>
+
+    <p>
+      <label for="Question-namechange">3. Have you ever had your name changed?</label>
+
+      <input type="radio" id="name-changed-yes" name="name-changed" value="yes">
+      <label for="name-changed-yes">Yes</label>
+
+      <input type="radio" id="name-changed-no" name="name-changed" value="no">
+      <label for="name-changed-no">No</label>
+
+    </p>
+
+    <fieldset>
+      <legend>If "Yes", please provide the following information:</legend>
+      <p>
+        <label for="previous-names">Previous name(s):</label>
+        <input type="text" id="previous-names" name="previous-names">
+      </p>
+
+      <label for="reason-for-change">Reason for the change:</label>
+      <input type="text" id="reason-for-change" name="reason-for-change">
+      </p>
+    </fieldset>
+
+    <p>
+      <label>4.Affiant's Identification No. applied to Government Record Systems.
+        Two certified copies of picture ID must be submitted.
+        The documents must be current and valid. </label>
+
+      <label for="Identification-table">
+
+        <table id="Q4-Identification-table">
+          <tr>
+            <th>Document</th>
+            <th>Number of Document</th>
+            <th>Date of issuance</th>
+            <th>Country of issuance</th>
+          </tr>
+          <tr>
+            <td>Social Security </td>
+            <td>23262988</td>
+            <td>2/15/21</td>
+            <td>Belize</td>
+          </tr>
+          <tr>
+            <td>Passport</td>
+            <td>P00035684</td>
+            <td>10/28/20</td>
+            <td>Belize</td>
+          </tr>
+          <tr>
+            <td>National Health Insurance </td>
+            <td>N/A</td>
+            <td>N/A</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Other ,specify </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+          </tr>
+        </table>
+
+      </label>
+    </p>
+
+
+    <label for="dateOfBirth">5. Date of Birth:</label>
+    <input type="text" id="dateOfBirth" name="dateOfBirth" placeholder="DD/MM/YYYY"><br><br>
+
+    <label for="placeOfBirth">6. Place of Birth:</label>
+    <input type="text" id="placeOfBirth" name="placeOfBirth" placeholder="District/State and Country"><br><br>
+
+    <label for="nationality">7. Nationality: (Indicate how aquired.) </label>
+    <select id="nationality" name="nationality">
+      <option value="birth">Birth</option>
+      <option value="naturalization">Naturalization</option>
+      <option value="marriage">Marriage</option>
+      <option value="other">Other</option>
+    </select>
+
+    <input type="text" id="otherNationality" name="otherNationality" placeholder="Please specify"
+      style="display:none;"><br><br>
+
+    <label for="spouse-name">8. Spouse’s Name:</label>
+    <input type="text" id="spouse-name" name="spouse-name" placeholder="Name"><br><br>
+
+
+    <label for="Affiant Address">9. Affiant's Address:
+
+
+      <table id="Q9-AffiantAddress-table">
+        <tr>
+          <th>Physical Address</th>
+          <th>Telephone Number</th>
+          <th>Fax Number</th>
+          <th>Email Address</th>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>501-202-4532</td>
+          <td>N/A</td>
+          <td>johndoe@gmail.com</td>
+        </tr>
+        <tr>
+          <td>Business</td>
+          <td>N/A</td>
+          <td>N/A</td>
+          <td>N/A</td>
+        </tr>
+      </table>
+
+    </label> <br>
+
+
+    <label for="residences">10. List your residences for the last ten (10) years
+
+      <table id="Q10-residences-table">
+        <tr>
+          <th>Dates</th>
+          <th>Street Address</th>
+          <th>Town/City</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Business</td>
+          <td>Jackson</td>
+          <td>94</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+      </table>
+
+
+    </label> <br>
+
+    <label for="Qualifications">11. Academic & Professional Qualifications
+      Supervisor reserves the right to request certified copies of certificates if deemed necessary
+
+      <table id="Q11-Qualifications-table">
+        <tr>
+          <th>Professional or Academic Qualifications</th>
+          <th>Name of Institution</th>
+          <th>Year Obtained</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Business</td>
+          <td>Jackson</td>
+          <td>94</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+      </table>
+
+
+    </label> <br>
+
+    <label for="Professional-Societies-and-Associations ">12.	List memberships in Professional Societies and Associations (current & past)
+
+      <table id="Q12-Professional-Societie-table">
+        <tr>
+          <th>Name or Professional Society or Association</th>
+          <th>Date of initial Membership</th>
+          <th>Date of Termination of Membership</th>
+          <th>Reason for Termination</th>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Business</td>
+          <td>Jackson</td>
+          <td>94</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+        <tr>
+          <td>Residential </td>
+          <td>Smith</td>
+          <td>50</td>
+          <td>80</td>
+        </tr>
+      </table>
+
+
+
+    </label> <br>
+
+<p>13. Present Occupation or employment</p>
+
+<p>
+    <label for="PositionHeld">Position held:</label>
+    <input type="text" id="PositionHeld" name="PositionHeld"> 
+    <label>(Official Job Title)</label>
+    </p>
+
+    <label for="placeOfBirth"> Name of Employer:</label>
+    <input type="text" id="NameOfEmployer" name="NameOfEmployer"><br><br>
+
+    <label for="DateOfAppointment"> Date of appointment:</label>
+    <input type="text" id="DateOfAppointment" name="DateOfAppointment"><br><br>
+
+<label for="EmploymentRecord">14.	List complete employment record (up to and including present jobs, positions, directories or officerships) for the past ten (10) years</label><br>
+
+
+<label>
+<table id="Q14-EmploymentRecord-table">
+  <tr>
+    <th>Dates</th>
+    <th>Employer’s Name</th>
+    <th>Employer’s Address</th>
+    <th>Employer’s Nature of Business</th>
+    <th>Position(s) Held</th> 
+  </tr>
+  <tr>
+    <td>Residential </td>
+    <td>Smith</td>
+    <td>50</td>
+    <td>80</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>Business</td>
+    <td>Jackson</td>
+    <td>94</td>
+    <td>80</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>Residential </td>
+    <td>Smith</td>
+    <td>50</td>
+    <td>80</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>Residential </td>
+    <td>Smith</td>
+    <td>50</td>
+    <td>80</td>
+    <td>80</td>
+  </tr>
+  <tr>
+    <td>Residential </td>
+    <td>Smith</td>
+    <td>50</td>
+    <td>80</td>
+    <td>80</td>
+  </tr>
+</table>
+
+</label> <br>
+
+<p><label for="Letters-Of-Refrence">15.	Two letters of reference must be submitted, one of which must be from the immediate past employer.</label></p>
+
+<label for="ImmediateEmployer"> Name of Immediate Past Employer: </label>
+<input type="text" id="ImmediateEmployer" name="ImmediateEmployer"><br><br>
+
+
+<p><label for="Person-Of-Refrence"> 16.	List Names, Address, Phone/fax numbers of persons providing written references
+                                     and other persons who could be contacted to provide additional references.</label>
+
+
+  <label>
+    <table id="Q16-PersonOfRefrence-table">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Email/Fax</th>
+        
+      </tr>
+      <tr>
+        <td>Residential </td>
+        <td>Smith</td>
+        <td>50</td>
+        <td>80</td>
+        
+      </tr>
+      <tr>
+        <td>Business</td>
+        <td>Jackson</td>
+        <td>94</td>
+        <td>80</td>
+        
+      </tr>
+      <tr>
+        <td>Residential </td>
+        <td>Smith</td>
+        <td>50</td>
+        <td>80</td>
+      </tr>
+</table>
+</label>
+
+<br>
+
+
+<label for="present-employer">Present employer may be contacted:</label>
+<input type="checkbox" name="present-employer" id="present-employer-yes" value="yes">
+<label for="present-employer-yes">Yes</label>
+<input type="checkbox" name="present-employer" id="present-employer-no" value="no">
+<label for="present-employer-no">No</label>
+
+<br>
+<br>
+
+<label for="former-employers">Former employers may be contacted:</label>
+<input type="checkbox" name="former-employers" id="former-employers-yes" value="yes">
+<label for="former-employers-yes">Yes</label>
+<input type="checkbox" name="former-employers" id="former-employers-no" value="no">
+<label for="former-employers-no">No</label>
+
+
+<br>
+<br>
+
+<p><label for="Letters-Of-Refrence">17.	A recent and valid copy of the Police Record must be submitted. The Police Record must also be submitted from the last 
+                                    country/state of residence if there was a change in residence less than one (1) year.</label></p>
+
+<label for="police-record-date">Date of Police Record:</label>
+<input type="date" id="police-record-date" name="police-record-date">
+
+<br>
+<label for="police-record-place">Place of Issue of Police Record:</label>
+<input type="text" id="police-record-place" name="police-record-place">
+
+
+<br>
+<br>
+
+<p>
+<label for="fidelity-bond">18. Have you ever been in a position which required a fidelity bond?</label>
+<input type="checkbox" name="fidelity-bond" id="fidelity-bond-yes" value="yes">
+<label for="sfidelity-bond-yes">Yes</label>
+<input type="checkbox" name="fidelity-bond" id="fidelity-bond-no" value="no">
+<label for="fidelity-bond-no">No</label>
+
+<br>
+<label for="bond-claim-details">If yes, has any claim ever been made on the bond, give details:</label>
+
+<textarea id="bond-claim-details" name="bond-claim-details"></textarea>
+</p>
+
+<p>
+<label for="fidelity-bond-denied">19. Have you ever been denied a fidelity bond or had a bond cancelled or revoked?</label>
+<input type="checkbox" name="fidelity-bond-denied" id="fidelity-bond-denied-yes" value="yes">
+<label for="fidelity-bond-denied-yes">Yes</label>
+<input type="checkbox" name="fidelity-bond-denied" id="fidelity-bond-denied-no" value="no">
+<label for="fidelity-bond-denied-no">No</label>
+
+<br>
+<label for="bond-denied-details">If "yes', give details:</label>
+
+<textarea id="bond-denied-details" name="bond-denied-details"></textarea>
+
+</p>
+ 
+
+<p>
+
+  <label >20. List any professional, occupational, and vocational licenses issued by any public or governmental licensing agency or regulatory authority which you
+           currently hold or have held in the past. (State date license issued, issuer of license, date terminated, reasons for termination.)</label>
+
+           <label>
+
+
+           <table id="Q20-EmploymentRecord-table">
+            <tr>
+              <th>Type of Licence Or Membership</th>
+              <th>Name of Agency/Professional Body Issuing Licence or Membership</th>
+              <th>Date Licence Issues or Membership Accepted</th>
+              <th>Date of Termination of Licence or Membership</th> 
+              <th>Reason for Termination of Licence or Membership</th>
+            </tr>
+            <tr>
+              <td>Residential </td>
+              <td>Smith</td>
+              <td>50</td>
+              <td>80</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>Business</td>
+              <td>Jackson</td>
+              <td>94</td>
+              <td>80</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>Residential </td>
+              <td>Smith</td>
+              <td>50</td>
+              <td>80</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>Residential </td>
+              <td>Smith</td>
+              <td>50</td>
+              <td>80</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td>Residential </td>
+              <td>Smith</td>
+              <td>50</td>
+              <td>80</td>
+              <td>80</td>
+            </tr>
+          </table>
+
+</label>
+</p>
+
+<p>
+  <label for="license-refused">21. During the last ten (10) years, have you ever been refused a professional, occupational, or vocational license by any public or governmental licensing agency or regulatory authority, or has any such license held by you ever been suspended or revoked?</label>
+<input type="checkbox" name="license-refused" id="license-refused-yes" value="yes">
+<label for="license-refused-yes">Yes</label>
+<input type="checkbox" name="license-refused" id="license-refused-no" value="no">
+<label for="license-refused-no">No</label>
+
+<br>
+<label for="license-refused-details">If "yes", give details:</label>
+
+<textarea id="license-refused-details" name="license-refused-details"></textarea>
+</p>
+
+
+<p>
+  <label>22. List any companies, partnerships, and unincorporated association where you are now or have been within 
+          the last 10 years (indicate) as shareholder/member,
+          director, chief executive officer, or senior management </label>
+
+          <label>
+
+            <table id="Q22-associations-table">
+              <tr>
+                <th>Name of Company, Partnerships,Unincorporated Association  </th>
+                <th>Nature of Relationship with Entity</th>
+                <th>Number of shares stock or stock held with Entity</th>
+                <th>Percentage of Owner with Entity</th> 
+                <th>Commencement & Termination Dates of Relationship</th>
+                <th>Country of Incorporation of Entity</th>
+                <th>Current or Past</th>
+              </tr>
+              <tr>
+                <td>Residential </td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <td>Business</td>
+                <td>Jackson</td>
+                <td>94</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <td>Residential </td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <td>Residential </td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+              </tr>
+              <tr>
+                <td>Residential </td>
+                <td>Smith</td>
+                <td>50</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+                <td>80</td>
+              </tr>
+            </table>
+<br>
+           <label>
+            If any of the shares or stock (where applicable) are pledged or hypothecated in any way, give details.
+          </label> 
+          </label>
+
+</p>
+
+<p>
+  <label>
+    <label for="subscriptions">23. Will you or members of your immediate family subscribe to or own, beneficially or of record, shares of stock of the applicant company or its affiliates?</label>
+    <input type="checkbox" name="subscriptions" id="subscriptions-yes" value="yes">
+    <label for="subscriptions-yes">Yes</label>
+    <input type="checkbox" name="subscriptions" id="subscriptions-no" value="no">
+    <label for="subscriptions-no">No</label>
+    <br>
+    <label>If any of the shares or stock are pledged or hypothecated in any way, give details.</label>
+
+<textarea id="subscriptions-details" name="subscriptions-details"></textarea>
+  </label>
+</p>
+
+
+<p>
+
+  <label>
+    <label for="bankrupt">24. Have you ever been adjudged a bankrupt by a court in any jurisdiction?</label>
+    <input type="checkbox" name="bankrupt" id="bankrupt-yes" value="yes">
+    <label for="bankrupt-yes">Yes</label>
+    <input type="checkbox" name="bankrupt" id="bankrupt-no" value="no">
+    <label for="bankrupt-no">No</label>
+    <br>
+    <label>If "yes', please supply particulars</label>
+
+<textarea id="bankrupt-details" name="bankrupt-details"></textarea>
+  </label>
+
+</p>
+
+
+<p>
+
+  <label>
+    <label for="payables">25. Have you failed to satisfy any debt adjudged due and payable by you as a judgement-debtor 
+                          under any order or a court or jurisdiction?</label>
+    <input type="checkbox" name="payables" id="payables-yes" value="yes">
+    <label for="payables-yes">Yes</label>
+    <input type="checkbox" name="payables" id="payables-no" value="no">
+    <label for="payables-no">No</label>
+    <br>
+    <label>If “yes”, please provide details.</label>
+
+<textarea id="payables-details" name="payables-details"></textarea>
+  </label>
+
+</p>
+
+
+<p>
+
+  <label>
+    <label for="misconduct">26.	Have you, in connection with the formation, control or management of any company, 
+                             partnership, or unincorporated association been adjudged by a court, in any jurisdcition, civilly liabile for any fraud, 
+                             misfeasance, or any misconduct by you towards such a body or company or towards any members thereof?</label>
+    <input type="checkbox" name="misconduct" id="misconduct-yes" value="yes">
+    <label for="misconduct-yes">Yes</label>
+    <input type="checkbox" name="misconduct" id="misconduct-no" value="no">
+    <label for="misconduct-no">No</label>
+    <br>
+    <label>If “yes”, please provide details.</label>
+
+<textarea id="misconduct-details" name="misconduct-details"></textarea>
+  </label>
+
+</p>
+
+
+<p>
+
+  <label>
+    <label for="conviction">27.	Have you ever been convicted or had a sentence imposed or suspended or had pronouncement of a sentence suspended 
+                               or pardoned for conviction of or pleaded guilty or nolo contenders to any information or indictment charging any felony, or charging a misdemeanor involving embezzlement, 
+                               theft, larceny, or mail fraud, or charging a violation of any corporate securities statute or any insurance law, or banking law or have you been the subject of any disciplinary
+                               proceedings of any governmental or state regulatory agency? </label>
+    <input type="checkbox" name="conviction" id="conviction-yes" value="yes">
+    <label for="conviction-yes">Yes</label>
+    <input type="checkbox" name="conviction" id="conviction-no" value="no">
+    <label for="conviction-no">No</label>
+    <br>
+    <label>If “yes”, give details.</label>
+
+<textarea id="conviction-details" name="conviction-details"></textarea>
+  </label>
+
+</p>
+
+
+
+
+
+<p>
+
+  <label>
+    <label for="company-misconduct">28.	Has any company or financial institution been charged allegedly as a result of any action or conduct on your part?   </label>
+    <input type="checkbox" name="company-misconduct" id="company-misconduct-yes" value="yes">
+    <label for="misconduct-yes">Yes</label>
+    <input type="checkbox" name="company-misconduct" id="company-misconduct-no" value="no">
+    <label for="company-misconduct-no">No</label>
+    <br>
+    <label>If “yes”, give details.</label>
+
+<textarea id="company-misconduct-details" name="company-misconduct-details"></textarea>
+  </label>
+
+</p>
+
+
+
+<p>
+
+  <label>
+    <label for="Q29">29.	Have you even been an officer, director, trustee, investment committee member, key employee, or controlling stockholder of any company,
+                                        partnership or unincorporated association which, while you occupied any such position or capacity with respect to it, become insolvent or was
+                                        placed under supervision or in receivership, rehabilitation, liquidation or conversatorship?  </label>
+    <input type="checkbox" name="Q29" id="Q29-yes" value="yes">
+    <label for="Q29-yes">Yes</label>
+    <input type="checkbox" name="Q29" id="Q29-no" value="no">
+    <label for="Q29-no">No</label>
+    <br>
+    <label>If “yes”, give details.</label>
+
+<textarea id="Q29-details" name="Q29-details"></textarea>
+  </label>
+
+</p>
+
+
+<p>
+
+  <label>
+    <label for="Q30">30.	Has the license of any company, partnership, unincorporated association of which you were an officer or director or
+                           key management person even been suspended or revoked while you occupied such position?       </label>
+    <input type="checkbox" name="Q30" id="Q30-yes" value="yes">
+    <label for="Q30-yes">Yes</label>
+    <input type="checkbox" name="Q30" id="Q30-no" value="no">
+    <label for="Q30-no">No</label>
+    <br>
+    <label>If “yes”, give details.</label>
+
+<textarea id="Q30-details" name="Q30-details"></textarea>
+  </label>
+
+</p>
+
+
+<p>
+
+  <label>
+    <label for="Q31">31.	Have you, anywhere, been dismissed from any office or employment or barred from entry to any profession or occupation? </label>
+    <input type="checkbox" name="Q31" id="Q31-yes" value="yes">
+    <label for="Q31-yes">Yes</label>
+    <input type="checkbox" name="Q31" id="Q31-no" value="no">
+    <label for="Q31-no">No</label>
+    <br>
+    <label>If “yes”, give details.</label>
+
+<textarea id="Q31-details" name="Q31-details"></textarea>
+  </label>
+
+</p>
+
+<p>
+
+  <label>
+    <label for="Q32">32.	In carrying out your duties will you be acting on the directions or instructions of any other person?            </label>
+    <input type="checkbox" name="Q32" id="Q32-yes" value="yes">
+    <label for="Q32-yes">Yes</label>
+    <input type="checkbox" name="Q32" id="Q32-no" value="no">
+    <label for="Q32-no">No</label>
+    <br>
+    <label>If “yes”, give details.</label>
+
+<textarea id="Q32-details" name="Q32-details"></textarea>
+  </label>
+
+</p>
+
+<p>
+  <h2 id="certification"> Certification</h2>
+   
+
+ 
+</p>
+
+<p>
+<label for="certification">
+I,<input type="text" id="certification-name" name="certification" placeholder="Name">hereby certify, under penalty of perjury or other liability for falsehood, that I am acting on my own behalf, 
+and that the foregoing statements are true and correct to the best of my knowledge and belief. 
+I undertake that as long as I continue to be <input type="text"> of an insurance company/insurance agent licensed under the Belize Insurance Act/International Insurance Act/Private Pension Act (indicate Act), 
+I will notify the Supervisor of Insurance/International Insurance/Pensions (Indicate Supervisor) of any material changes affecting the completeness of the answers to questions above.
+</label>
+</p>
+
+<p>
+<label for="date-signature">
+
+  <input type="text" id="Date" name="Date" placeholder="Date">
+  <input type="text" id="affiant-signature" name="affiant-signature" placeholder="Signature of Affiant">
+
+</label>
+</p>
+
+<p>
+  <label>
+    Country of <input type="text" id="country" name="country" placeholder="country">  District of <input type="text" id="District" name="Date" placeholder="District">
+  </label>
+</p>
+
+<p>
+<label>
+
+  Personally appeared before me the above named <input type="text" id="sworn-name" placeholder="Name">, who is personally known to me, being duly sworn, deposes and says that s/he
+  executed the above instrument and that the statements and answers contained therein are true and correct to the best of his knowledge and belief.
+
+</label>
+</p>
+
+<p>
+  <label>
+    Subscribed and shown to before me this 
+  <input type="text" id="Day" placeholder="Day"> day of <input type="text" id="Month"  placeholder="Month">, <input type="text" id="Year" placeholder="Year">
+  </label>
+</p>
+
+<p>
+  <label>
+ <p>(Seal)</p> 
+ <p>Name of Notary Public/Justice of the Peace:	<input type="text" id="Name-of-JP" placeholder="JP Name"> </p>
+
+ <p>Address of Notary Publice/Justice of the Peace:<input type="text" id="Address-of-JP" placeholder="Address"></p>
+
+ <p>My Commission Expires<input type="text" id="Commission-expires" placeholder="Date"></p>
+
+  </label>
+</p>
+
+
+<label for="submitbutton">
+
+  <button id="submitBtn">Submit</button>
+
+</label>
+
+  </form>
+</body>
+
+</html>

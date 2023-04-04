@@ -1,0 +1,68 @@
+#heading{
+  text-align: center;
+}
+
+#form{
+    border:1px solid rgb(0, 0, 0);
+    width: 80%;
+    padding-left: 10%;
+    
+    
+  } 
+
+  /* the form function above is giving all the tables with the form a set witdth. 
+  TEST TO VERIFY */
+  
+  #Q4-Identification-table,th,td{
+    
+    border: 1px solid black;
+  
+  }
+
+  #Q9-AffiantAddress-table,th,td{
+    border: 1px solid black;
+
+  }
+  #Q10-residences-tableth,th,td{
+    border: 1px solid black;
+
+  }
+
+  #Q11-Qualifications-table,th,td{
+    border: 1px solid black;
+  }
+
+  #Q12-Professional-Societie-table,th,td{
+
+    border: 1px solid black;
+
+  }
+
+  #Q16-PersonOfRefrence-table,th,td{
+
+    border: 1px solid black;
+
+  }
+
+  #Q20-EmploymentRecord-table,th,td{
+
+    border: 1px solid black;
+
+  }
+
+  #certification{
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #affiant-signature{
+    float: center;
+  }
+
+  #submitBtn{
+
+    float: right;
+
+  }
+
