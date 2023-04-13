@@ -8,6 +8,10 @@ Comming soon to a store near you
 1. Rene Allen 
 2. Jahmur Lopez
 
-test
 
-testing for push to github
+
+
+
+
+GitHub Help
+https://www.w3schools.com/git/default.asp?remote=github
