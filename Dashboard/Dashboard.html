@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="Dashboard.css">
+  <script src="Dashboard.js"></script>
+
+  <title>Dashboard</title>
+
+</head>
+
+<body>
+
+  <div class="tabs">
+
+    <div class="tabs__sidebar">
+      <button class="tabs__button" data-for-tab="1">Unverified</button>
+      <button class="tabs__button" data-for-tab="2">Verified</button>
+      <button class="tabs__button" data-for-tab="3">Archive</button>
+    </div>
+
+    <div class="tabs__content" data-tab="1">
+
+      <div class="search-bar">
+        <input type="search" placeholder="Search">
+      </div>
+
+      <h2 style="text-align: right;">Unverified</h2>
+
+
+      <form>
+
+        <label>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>FNAME</th>
+                <th>LNAME</th>
+                <th>DATE</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>2022-01-01</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>2022-02-01</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bob</td>
+                <td>Johnson</td>
+                <td>2022-03-01</td>
+                <td>Pending</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Alice</td>
+                <td>Williams</td>
+                <td>2022-04-01</td>
+                <td>Pending</td>
+              </tr>
+            </tbody>
+          </table>
+          
+
+        </label>
+
+      </form>
+
+    </div>
+
+    <div class="tabs__content" data-tab="2">
+
+      <div class="search-bar">
+        <input type="search" placeholder="Search">
+      </div>
+
+      <h2 style="text-align: right;">Verified</h2>
+
+      <form>
+
+        <label>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>FNAME</th>
+                <th>LNAME</th>
+                <th>DATE</th>
+                <th>STATUS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>2022-01-01</td>
+                <td>Verified</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>2022-02-01</td>
+                <td>Verified</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Bob</td>
+                <td>Johnson</td>
+                <td>2022-03-01</td>
+                <td>Verified</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Alice</td>
+                <td>Williams</td>
+                <td>2022-04-01</td>
+                <td>Verified</td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </label>
+
+      </form>
+  </div>
+
+
+
+  <div class="tabs__content" data-tab="3">
+
+    <div class="search-bar">
+      <input type="search" placeholder="Search">
+    </div>
+
+    <h2 style="text-align: right;">Archive</h2>
+
+    <form>
+
+      <label>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>FNAME</th>
+              <th>LNAME</th>
+              <th>DATE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>John</td>
+              <td>Doe</td>
+              <td>2022-01-01</td>
+              <td>Approved</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </label>
+
+    </form>
+</div>
+</body>
+
+</html>

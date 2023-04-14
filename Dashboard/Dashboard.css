@@ -1,0 +1,104 @@
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+.tabs{
+  border: 1px solid #cccccc;
+  display: flex;
+}
+
+.tabs__sidebar{
+  width: 125px;
+  flex-shrink: 0;
+  background: #cccccc;
+
+}
+
+
+.tabs__button{
+  display: block;
+  padding: 10px;
+  background: #cccccc;
+  border: none;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.tabs__button:active{
+  background: #dddddd;
+}
+
+.tabs__button:not(:last-of-type) {
+  border-bottom: 1px solid #000000;
+}
+
+.tabs__button--active{
+
+  font-weight: bold;
+  border-right: 2px solid #090000 ;
+  background: #dddddd;
+}
+
+.tabs__content{
+  padding: 15px;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.tabs__content--active {
+  display: block;
+}
+
+.tabs__content > :first-child {
+
+  margin-top: 0;
+}
+
+/* #table th,td{
+  border: 1px solid black;
+  width: 80%;
+} */
+
+table {
+  width: 185%;
+  border-collapse: collapse;
+}
+th {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid black;
+  width: 200;
+}
+td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+
+  position: relative;
+  width: 200px;
+
+
+}
+
+.search-bar input[type="search"] {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
