@@ -1,13 +1,15 @@
-# BioAff
-System for our Software Engineering class
-Comming soon to a store near you
+# Biographical Affidavid for OSIPP
 
-## Please sign your name if you successfully pushed to the GIT REPO!
+## Description
 
-0. Michael Gomez
-1. Rene Allen 
-2. Jahmur Lopez
 
+## Prerequisites
+
+## Installation
+
+## Contributing
+
+## Contact
 
 
 
